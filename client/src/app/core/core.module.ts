@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { TestErrorComponent } from './test-error/test-error.component';
 import { ServerErrorComponent } from './server-error/server-error.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -14,7 +15,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true
+    })
   ],
   exports: [NavBarComponent]
 })
