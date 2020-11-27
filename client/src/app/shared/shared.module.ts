@@ -5,9 +5,10 @@ import { RouterModule } from '@angular/router';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TextInputComponent } from './components/text-input/text-input.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [TextInputComponent],
   imports: [
     CommonModule,
     PaginationModule.forRoot(),
@@ -22,7 +23,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     CarouselModule,
     BsDropdownModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    TextInputComponent
   ]
 })
 export class SharedModule { }
